@@ -13,9 +13,10 @@ import {
     pages: number
     items: number
     page: number
+    rowsShown: number
   }
-  
-  export function Pagination({ items, page, pages }: PaginationProps) {
+
+  export function Pagination({ items, page, pages, rowsShown }: PaginationProps) {
     const [, setSearchParams] = useSearchParams()
   
     function firstPage() {
@@ -60,7 +61,7 @@ import {
   
     return (
       <div className="flex text-sm items-center justify-between text-zinc-500">
-        <span>Showing 10 of {items} items</span>
+        <span>Showing {rowsShown} of {items} items</span>
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
             <span>Rows per page</span>
