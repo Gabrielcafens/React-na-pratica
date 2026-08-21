@@ -156,7 +156,7 @@ export function App() {
           </TableBody>
         </Table>
 
-        {tagsResponse && <Pagination pages={tagsResponse.pages} items={tagsResponse.items} page={page} />}
+        {tagsResponse && <Pagination pages={tagsResponse.pages} items={tagsResponse.items} page={page} rowsShown={tagsResponse.data.length} />}
       </main>
     </div>
   )
